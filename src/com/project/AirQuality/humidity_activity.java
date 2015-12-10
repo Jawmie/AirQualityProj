@@ -19,7 +19,7 @@ public class humidity_activity extends Activity {
     }
 
     public void seekbarHum(){
-        humTest = (SeekBar)findViewById(R.id.seekBar);
+        humTest = (SeekBar)findViewById(R.id.seekBar2);
         resultTest = (TextView)findViewById(R.id.humResult);
         resultTest.setText(humTest.getProgress() + "%RH");
 

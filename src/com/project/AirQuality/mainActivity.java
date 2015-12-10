@@ -32,18 +32,14 @@ public class mainActivity extends Activity {
         temButt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempAct = new Intent(mainActivity.this, temperature_activity.class);
-
-                startActivity(tempAct);
+                temperatureTest();
             }
         });
 
         humButt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent humAct = new Intent(mainActivity.this, humidity_activity.class);
-
-                startActivity(humAct);
+                humidityTest();
             }
         });
 
@@ -64,5 +60,17 @@ public class mainActivity extends Activity {
                 results.setText("Movement Detected!");
             }
         });
+    }
+
+    private void temperatureTest(){
+        Intent tempAct = new Intent(this, temperature_activity.class);
+
+        startActivity(tempAct);
+    }
+
+    private void humidityTest(){
+        Intent humAct = new Intent(this, humidity_activity.class);
+
+        startActivity(humAct);
     }
 }
